@@ -1,0 +1,41 @@
+{
+  "" : {
+    "const-values" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-primary.swiftconstvalues",
+    "dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-primary.d",
+    "diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-primary.dia",
+    "emit-module-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-primary-emit-module.dia",
+    "pch" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-primary.swiftdeps"
+  },
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/Sources/DayblockCore/Board.swift" : {
+    "index-unit-output-path" : "/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/Board.o",
+    "llvm-bc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/Board.bc",
+    "object" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/Board.o"
+  },
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/Sources/DayblockCore/GameSession.swift" : {
+    "index-unit-output-path" : "/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/GameSession.o",
+    "llvm-bc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/GameSession.bc",
+    "object" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/GameSession.o"
+  },
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/Sources/DayblockCore/Generator.swift" : {
+    "index-unit-output-path" : "/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/Generator.o",
+    "llvm-bc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/Generator.bc",
+    "object" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/Generator.o"
+  },
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/Sources/DayblockCore/Puzzle.swift" : {
+    "index-unit-output-path" : "/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/Puzzle.o",
+    "llvm-bc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/Puzzle.bc",
+    "object" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/Puzzle.o"
+  },
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/Sources/DayblockCore/PuzzleDate.swift" : {
+    "index-unit-output-path" : "/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/PuzzleDate.o",
+    "llvm-bc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/PuzzleDate.bc",
+    "object" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/PuzzleDate.o"
+  },
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/Sources/DayblockCore/Solver.swift" : {
+    "index-unit-output-path" : "/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/Solver.o",
+    "llvm-bc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/Solver.bc",
+    "object" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/Solver.o"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "" : {
+    "diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/dayblock-cli-p.build/Objects-normal/arm64/dayblock-cli-primary.dia",
+    "emit-module-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/dayblock-cli-p.build/Objects-normal/arm64/dayblock-cli-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/dayblock-cli-p.build/Objects-normal/arm64/dayblock-cli-primary-emit-module.dia",
+    "pch" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/dayblock-cli-p.build/Objects-normal/arm64/dayblock-cli-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/dayblock-cli-p.build/Objects-normal/arm64/dayblock-cli-primary.swiftdeps"
+  },
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/Sources/dayblock-cli/main.swift" : {
+    "const-values" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/dayblock-cli-p.build/Objects-normal/arm64/main.swiftconstvalues",
+    "dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/dayblock-cli-p.build/Objects-normal/arm64/main.d",
+    "diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/dayblock-cli-p.build/Objects-normal/arm64/main.dia",
+    "index-unit-output-path" : "/DayblockCore.build/Debug/dayblock-cli-p.build/Objects-normal/arm64/main.o",
+    "llvm-bc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/dayblock-cli-p.build/Objects-normal/arm64/main.bc",
+    "object" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/dayblock-cli-p.build/Objects-normal/arm64/main.o",
+    "swift-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/dayblock-cli-p.build/Objects-normal/arm64/main.swiftdeps",
+    "swiftmodule" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/dayblock-cli-p.build/Objects-normal/arm64/main~partial.swiftmodule"
+  }
+}

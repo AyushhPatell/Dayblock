@@ -1,0 +1,69 @@
+{
+  "" : {
+    "diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-primary.dia",
+    "emit-module-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-primary-emit-module.dia",
+    "pch" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-primary.swiftdeps"
+  },
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/Sources/DayblockCore/Board.swift" : {
+    "const-values" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Board.swiftconstvalues",
+    "dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Board.d",
+    "diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Board.dia",
+    "index-unit-output-path" : "/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Board.o",
+    "llvm-bc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Board.bc",
+    "object" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Board.o",
+    "swift-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Board.swiftdeps",
+    "swiftmodule" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Board~partial.swiftmodule"
+  },
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/Sources/DayblockCore/GameSession.swift" : {
+    "const-values" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/GameSession.swiftconstvalues",
+    "dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/GameSession.d",
+    "diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/GameSession.dia",
+    "index-unit-output-path" : "/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/GameSession.o",
+    "llvm-bc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/GameSession.bc",
+    "object" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/GameSession.o",
+    "swift-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/GameSession.swiftdeps",
+    "swiftmodule" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/GameSession~partial.swiftmodule"
+  },
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/Sources/DayblockCore/Generator.swift" : {
+    "const-values" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Generator.swiftconstvalues",
+    "dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Generator.d",
+    "diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Generator.dia",
+    "index-unit-output-path" : "/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Generator.o",
+    "llvm-bc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Generator.bc",
+    "object" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Generator.o",
+    "swift-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Generator.swiftdeps",
+    "swiftmodule" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Generator~partial.swiftmodule"
+  },
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/Sources/DayblockCore/Puzzle.swift" : {
+    "const-values" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Puzzle.swiftconstvalues",
+    "dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Puzzle.d",
+    "diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Puzzle.dia",
+    "index-unit-output-path" : "/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Puzzle.o",
+    "llvm-bc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Puzzle.bc",
+    "object" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Puzzle.o",
+    "swift-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Puzzle.swiftdeps",
+    "swiftmodule" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Puzzle~partial.swiftmodule"
+  },
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/Sources/DayblockCore/PuzzleDate.swift" : {
+    "const-values" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/PuzzleDate.swiftconstvalues",
+    "dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/PuzzleDate.d",
+    "diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/PuzzleDate.dia",
+    "index-unit-output-path" : "/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/PuzzleDate.o",
+    "llvm-bc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/PuzzleDate.bc",
+    "object" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/PuzzleDate.o",
+    "swift-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/PuzzleDate.swiftdeps",
+    "swiftmodule" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/PuzzleDate~partial.swiftmodule"
+  },
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/Sources/DayblockCore/Solver.swift" : {
+    "const-values" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Solver.swiftconstvalues",
+    "dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Solver.d",
+    "diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Solver.dia",
+    "index-unit-output-path" : "/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Solver.o",
+    "llvm-bc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Solver.bc",
+    "object" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Solver.o",
+    "swift-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Solver.swiftdeps",
+    "swiftmodule" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCore-t.build/Objects-normal/arm64/Solver~partial.swiftmodule"
+  }
+}

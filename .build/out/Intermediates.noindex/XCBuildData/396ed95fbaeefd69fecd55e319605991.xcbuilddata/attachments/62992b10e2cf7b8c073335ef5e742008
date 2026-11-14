@@ -1,0 +1,29 @@
+{
+  "" : {
+    "diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/DayblockCoreTests-primary.dia",
+    "emit-module-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/DayblockCoreTests-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/DayblockCoreTests-primary-emit-module.dia",
+    "pch" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/DayblockCoreTests-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/DayblockCoreTests-primary.swiftdeps"
+  },
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/DerivedSources/test_entry_point.swift" : {
+    "const-values" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/test_entry_point.swiftconstvalues",
+    "dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/test_entry_point.d",
+    "diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/test_entry_point.dia",
+    "index-unit-output-path" : "/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/test_entry_point.o",
+    "llvm-bc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/test_entry_point.bc",
+    "object" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/test_entry_point.o",
+    "swift-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/test_entry_point.swiftdeps",
+    "swiftmodule" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/test_entry_point~partial.swiftmodule"
+  },
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/Tests/DayblockCoreTests/DayblockCoreTests.swift" : {
+    "const-values" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/DayblockCoreTests.swiftconstvalues",
+    "dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/DayblockCoreTests.d",
+    "diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/DayblockCoreTests.dia",
+    "index-unit-output-path" : "/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/DayblockCoreTests.o",
+    "llvm-bc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/DayblockCoreTests.bc",
+    "object" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/DayblockCoreTests.o",
+    "swift-dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/DayblockCoreTests.swiftdeps",
+    "swiftmodule" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Debug/DayblockCoreTests-p.build/Objects-normal/arm64/DayblockCoreTests~partial.swiftmodule"
+  }
+}

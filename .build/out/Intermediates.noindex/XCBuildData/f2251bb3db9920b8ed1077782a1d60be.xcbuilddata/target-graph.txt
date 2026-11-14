@@ -1,0 +1,10 @@
+Target dependency graph (4 targets)
+Target 'AllExcludingTests' in project 'Aggregate'
+➜ Explicit dependency on target 'DayblockCore-product' in project 'DayblockCore'
+➜ Explicit dependency on target 'dayblock-cli-product' in project 'DayblockCore'
+➜ Explicit dependency on target 'DayblockCore' in project 'DayblockCore'
+Target 'dayblock-cli-product' in project 'DayblockCore'
+➜ Explicit dependency on target 'DayblockCore' in project 'DayblockCore'
+Target 'DayblockCore-product' in project 'DayblockCore'
+➜ Explicit dependency on target 'DayblockCore' in project 'DayblockCore'
+Target 'DayblockCore' in project 'DayblockCore' (no dependencies)

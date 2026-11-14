@@ -1,0 +1,12 @@
+{
+  "/Users/ayush/Documents/PJ/DS/DayblockCore/Sources/DayblockCore/Board.swift" : {
+    "abi-baseline-json" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/DayblockCore.abi.json",
+    "const-values" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-primary.swiftconstvalues",
+    "dependencies" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-primary.d",
+    "diagnostics" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-primary.dia",
+    "objc-header" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/DayblockCore-Swift.h",
+    "swiftdoc" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/DayblockCore.swiftdoc",
+    "swiftmodule" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/DayblockCore.swiftmodule",
+    "swiftsourceinfo" : "/Users/ayush/Documents/PJ/DS/DayblockCore/.build/out/Intermediates.noindex/DayblockCore.build/Release/DayblockCore-t.build/Objects-normal/arm64/DayblockCore.swiftsourceinfo"
+  }
+}

@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'dayblock-cli-product' in project 'DayblockCore'
+➜ Explicit dependency on target 'DayblockCore' in project 'DayblockCore'
+Target 'DayblockCore' in project 'DayblockCore' (no dependencies)

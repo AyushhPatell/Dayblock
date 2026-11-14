@@ -1,0 +1,14 @@
+Target dependency graph (5 targets)
+Target 'AllIncludingTests' in project 'Aggregate'
+➜ Explicit dependency on target 'DayblockCoreTests-product' in project 'DayblockCore'
+➜ Dependency on target 'DayblockCoreTests-product' in project 'DayblockCore' via transitive dependency through 'DayblockCoreTests-test-runner'
+➜ Explicit dependency on target 'DayblockCore-product' in project 'DayblockCore'
+➜ Explicit dependency on target 'dayblock-cli-product' in project 'DayblockCore'
+➜ Explicit dependency on target 'DayblockCore' in project 'DayblockCore'
+Target 'dayblock-cli-product' in project 'DayblockCore'
+➜ Explicit dependency on target 'DayblockCore' in project 'DayblockCore'
+Target 'DayblockCore-product' in project 'DayblockCore'
+➜ Explicit dependency on target 'DayblockCore' in project 'DayblockCore'
+Target 'DayblockCoreTests-product' in project 'DayblockCore'
+➜ Explicit dependency on target 'DayblockCore' in project 'DayblockCore'
+Target 'DayblockCore' in project 'DayblockCore' (no dependencies)
