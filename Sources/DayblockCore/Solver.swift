@@ -43,21 +43,36 @@ struct StateCodec {
 final class Search {
     let board: Board
     let codec: StateCodec
+    /// When set, coloured blocks already on these cells stay put for the whole search.
+    let targets: [Int]
+    let locks: Bool
     private(set) var keys: [UInt64] = []
     private var parents: [Int32] = []
     private var moves: [UInt8] = []
     private var depths: [UInt16] = []
     private var index: [UInt64: Int32] = [:]
 
-    init(board: Board, start: [Int], colorCount: Int) {
+    init(board: Board, start: [Int], colorCount: Int, targets: [Int] = [], locks: Bool = false) {
         self.board = board
         self.codec = StateCodec(colorCount: colorCount, blockCount: start.count)
+        self.targets = targets
+        self.locks = locks
         let key = codec.pack(start)
         keys.append(key)
         parents.append(-1)
         moves.append(0)
         depths.append(0)
         index[key] = 0
+    }
+
+    func slid(_ positions: [Int], _ direction: Direction) -> [Int] {
+        guard locks else { return board.slide(positions, direction) }
+        var fixed = [Bool](repeating: false, count: positions.count)
+        let limit = min(targets.count, positions.count)
+        for index in 0..<limit where positions[index] == targets[index] {
+            fixed[index] = true
+        }
+        return board.slide(positions, direction, fixed: fixed)
     }
 
     /// Explores until nothing new is left, `maxDepth` swipes are reached, or
@@ -70,7 +85,7 @@ final class Search {
             if depth >= maxDepth { return }
             let positions = codec.unpack(keys[head])
             for direction in Direction.allCases {
-                let next = board.slide(positions, direction)
+                let next = slid(positions, direction)
                 if next == positions { continue }
                 let key = codec.pack(next)
                 if index[key] != nil { continue }
@@ -107,7 +122,7 @@ public enum Solver {
     /// Finds a shortest solution from `positions`, or nil when there is none
     /// (or none within `maxNodes` explored positions).
     public static func solve(
-        board: Board, positions: [Int], targets: [Int], maxNodes: Int = 3_000_000
+        board: Board, positions: [Int], targets: [Int], maxNodes: Int = 3_000_000, locks: Bool = false
     ) -> Solution? {
         let colorCount = targets.count
         func solved(_ p: [Int]) -> Bool {
@@ -115,7 +130,9 @@ public enum Solver {
             return true
         }
         if solved(positions) { return Solution(moves: []) }
-        let search = Search(board: board, start: positions, colorCount: colorCount)
+        let search = Search(
+            board: board, start: positions, colorCount: colorCount, targets: targets, locks: locks
+        )
         var goal: Int?
         search.run(maxDepth: .max, maxNodes: maxNodes) { node, p, _ in
             if solved(p) {
@@ -128,6 +145,9 @@ public enum Solver {
     }
 
     public static func solve(_ puzzle: Puzzle, from positions: [Int]? = nil) -> Solution? {
-        solve(board: puzzle.board, positions: positions ?? puzzle.startPositions, targets: puzzle.targets)
+        solve(
+            board: puzzle.board, positions: positions ?? puzzle.startPositions, targets: puzzle.targets,
+            locks: puzzle.rules.locksOnTarget
+        )
     }
 }

@@ -118,6 +118,57 @@ public struct Board: Hashable, Sendable {
         }
         return result
     }
+
+    /// Like `slide`, except blocks marked in `fixed` stay where they are and
+    /// stop everyone else. An empty or all-false mask is the ordinary tilt.
+    public func slide(_ positions: [Int], _ direction: Direction, fixed: [Bool]) -> [Int] {
+        if !fixed.contains(true) { return slide(positions, direction) }
+        let count = positions.count
+        var moving: [Int] = []
+        moving.reserveCapacity(count)
+        for index in 0..<count where index >= fixed.count || !fixed[index] {
+            moving.append(index)
+        }
+        func rank(_ index: Int) -> Int {
+            let cell = positions[index]
+            switch direction {
+            case .right: return -x(of: cell)
+            case .left: return x(of: cell)
+            case .down: return -y(of: cell)
+            case .up: return y(of: cell)
+            }
+        }
+        if moving.count > 1 {
+            for index in 1..<moving.count {
+                let item = moving[index]
+                let itemRank = rank(item)
+                var hole = index - 1
+                while hole >= 0 && rank(moving[hole]) > itemRank {
+                    moving[hole + 1] = moving[hole]
+                    hole -= 1
+                }
+                moving[hole + 1] = item
+            }
+        }
+        var occupied: UInt64 = 0
+        for index in 0..<count where index < fixed.count && fixed[index] {
+            occupied |= 1 << UInt64(positions[index])
+        }
+        let step = direction.dx + direction.dy * width
+        var result = positions
+        for index in moving {
+            var cell = positions[index]
+            occupied &= ~(1 << UInt64(cell))
+            while blocked[cell] & direction.bit == 0 {
+                let next = cell + step
+                if occupied & (1 << UInt64(next)) != 0 { break }
+                cell = next
+            }
+            occupied |= 1 << UInt64(cell)
+            result[index] = cell
+        }
+        return result
+    }
 }
 
 extension Board: Codable {
