@@ -19,6 +19,52 @@ let arguments = Array(CommandLine.arguments.dropFirst())
 let command = arguments.first ?? "sample"
 
 switch command {
+case "paint":
+    // dayblock-cli paint [days] [yyyy-mm-dd]   print Paint dailies with timing
+    let days = arguments.count > 1 ? Int(arguments[1]) ?? 7 : 7
+    var date = arguments.count > 2 ? parseDate(arguments[2]) ?? PuzzleDate(year: 2026, month: 11, day: 16)
+                                   : PuzzleDate(year: 2026, month: 11, day: 16)
+    for _ in 0..<days {
+        let clock = ContinuousClock()
+        var puzzle: PaintPuzzle!
+        let elapsed = clock.measure { puzzle = PaintGenerator.daily(for: date) }
+        print("\(date.iso)  \(date.weekday)  \(puzzle.difficulty.rawValue)  best \(puzzle.par)  floor \(puzzle.board.floorCount)  wander \(PaintGenerator.wanderRatio(puzzle, seed: 1))%  \(elapsed)")
+        print(puzzle.render())
+        print("solution: \(arrows(puzzle.solution))\n")
+        date = date.adding(days: 1)
+    }
+case "fit":
+    // dayblock-cli fit [days] [yyyy-mm-dd]   print Fit dailies with timing
+    let days = arguments.count > 1 ? Int(arguments[1]) ?? 7 : 7
+    var date = arguments.count > 2 ? parseDate(arguments[2]) ?? PuzzleDate(year: 2026, month: 11, day: 16)
+                                   : PuzzleDate(year: 2026, month: 11, day: 16)
+    for _ in 0..<days {
+        let clock = ContinuousClock()
+        var puzzle: FitPuzzle!
+        let elapsed = clock.measure { puzzle = FitGenerator.daily(for: date) }
+        let sizes = puzzle.pieces.map(\.size).map(String.init).joined(separator: ",")
+        let answers = FitSolver.countSolutions(puzzle, limit: 20)
+        print("\(date.iso)  \(date.weekday)  \(puzzle.difficulty.rawValue)  cells \(puzzle.outlineCount)  pieces [\(sizes)]  rotate \(puzzle.rotates)  clues \(puzzle.clues.count)  answers \(answers)  \(elapsed)")
+        print(puzzle.render() + "\n")
+        date = date.adding(days: 1)
+    }
+case "fit-levels":
+    for level in [1, 2, 3, 5, 8, 12, 20, 30, 50, 80, 120] {
+        let clock = ContinuousClock()
+        var puzzle: FitPuzzle!
+        let elapsed = clock.measure { puzzle = FitGenerator.level(level) }
+        let sizes = puzzle.pieces.map(\.size).map(String.init).joined(separator: ",")
+        print("level \(level)  cells \(puzzle.outlineCount)  pieces [\(sizes)]  rotate \(puzzle.rotates)  clues \(puzzle.clues.count)  answers \(FitSolver.countSolutions(puzzle, limit: 20))  \(elapsed)")
+        print(puzzle.render() + "\n")
+    }
+case "paint-levels":
+    for level in [1, 2, 3, 5, 8, 12, 20, 30, 50, 80, 120] {
+        let clock = ContinuousClock()
+        var puzzle: PaintPuzzle!
+        let elapsed = clock.measure { puzzle = PaintGenerator.level(level) }
+        print("level \(level)  best \(puzzle.par)  floor \(puzzle.board.floorCount)  \(elapsed)")
+        print(puzzle.render() + "\n")
+    }
 case "sample":
     let days = arguments.count > 1 ? Int(arguments[1]) ?? 7 : 7
     var date = arguments.count > 2 ? parseDate(arguments[2]) ?? PuzzleDate(year: 2026, month: 11, day: 16)
