@@ -25,6 +25,16 @@ import DayblockCore
         #expect(Streaks.best(solvedDays: [1, 2, 3, 10, 11, 20]) == 3)
         #expect(Streaks.best(solvedDays: [5]) == 1)
     }
+
+    /// Hub-facing cases required by launch Step 3 (also covered in MidnightTests).
+    @Test func anyGameSolvedCountsTowardTheSharedStreak() {
+        let today = 100
+        #expect(DailyStreak.current(paint: [today], fit: [], today: today) == 1)
+        #expect(DailyStreak.current(paint: [], fit: [today], today: today) == 1)
+        #expect(DailyStreak.current(paint: [today], fit: [today], today: today) == 1)
+        #expect(DailyStreak.current(paint: [98, 99], fit: [99], today: today) == 2)
+        #expect(DailyStreak.current(paint: [97, 98], fit: [97], today: today) == 0)
+    }
 }
 
 @Suite struct ShareTextTests {
