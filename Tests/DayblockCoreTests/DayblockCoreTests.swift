@@ -97,6 +97,16 @@ import DayblockCore
 }
 
 @Suite struct GeneratorTests {
+    static func expectedPar(for weekday: PuzzleDate.Weekday) -> ClosedRange<Int> {
+        switch weekday {
+        case .monday: return 3...4
+        case .tuesday: return 4...5
+        case .wednesday, .thursday: return 6...7
+        case .friday, .saturday: return 8...10
+        case .sunday: return 10...13
+        }
+    }
+
     static func dates(_ count: Int) -> [PuzzleDate] {
         var calendar = Calendar(identifier: .gregorian)
         calendar.timeZone = TimeZone(identifier: "UTC")!
@@ -119,10 +129,10 @@ import DayblockCore
     }
 
     @Test func everyDailyPuzzleIsValid() throws {
-        let expectedPar: [Difficulty: ClosedRange<Int>] = [.easy: 4...5, .medium: 6...7, .hard: 8...10, .expert: 10...13]
         for date in Self.dates(120) {
             let puzzle = Generator.daily(for: date)
             #expect(puzzle.difficulty == Generator.difficulty(for: date.weekday))
+            let expectedPar = Self.expectedPar(for: date.weekday)
 
             // Blocks and targets sit on distinct cells, and nobody starts at home.
             let start = puzzle.startPositions
@@ -144,7 +154,7 @@ import DayblockCore
             let solved = try #require(Solver.solve(puzzle))
             #expect(solved.count == puzzle.par)
 
-            #expect(expectedPar[puzzle.difficulty]!.contains(puzzle.par), "\(date.iso) par \(puzzle.par)")
+            #expect(expectedPar.contains(puzzle.par), "\(date.iso) \(date.weekday) par \(puzzle.par)")
         }
     }
 

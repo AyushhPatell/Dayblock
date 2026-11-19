@@ -4,11 +4,16 @@ public enum Dayblock {
 }
 
 extension PuzzleDate {
-    /// Parses "2026-11-14".
+    /// Parses "2026-11-14". Rejects impossible days, extra pieces, and whitespace.
     public init?(iso: String) {
-        let parts = iso.split(separator: "-").compactMap { Int($0) }
-        guard parts.count == 3, (1...12).contains(parts[1]), (1...31).contains(parts[2]) else { return nil }
-        self.init(year: parts[0], month: parts[1], day: parts[2])
+        let pieces = iso.split(separator: "-", omittingEmptySubsequences: false)
+        guard pieces.count == 3,
+              let year = Int(pieces[0]),
+              let month = Int(pieces[1]),
+              let day = Int(pieces[2]),
+              Self.isValid(year: year, month: month, day: day)
+        else { return nil }
+        self.init(year: year, month: month, day: day)
     }
 }
 
