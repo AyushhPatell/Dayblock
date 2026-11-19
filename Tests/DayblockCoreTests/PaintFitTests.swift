@@ -201,6 +201,19 @@ private func days(_ count: Int, from start: PuzzleDate = PuzzleDate(year: 2026, 
         }
     }
 
+    @Test func placementCoveringFindsALegalSpotUnderATappedCell() throws {
+        let puzzle = FitGenerator.daily(for: PuzzleDate(year: 2026, month: 11, day: 16))
+        var session = FitSession(puzzle: puzzle)
+        let piece = 0
+        let answer = puzzle.solution[piece]
+        while session.rotations[piece] != answer.rotation { session.rotate(piece) }
+        let cells = try #require(puzzle.cells(of: piece, at: answer))
+        let covered = cells[0]
+        let found = try #require(session.placementCovering(piece, cell: covered))
+        #expect(session.place(piece, x: found.x, y: found.y) == .fits)
+        #expect(puzzle.cells(of: piece, at: found)?.contains(covered) == true)
+    }
+
     @Test func placementChecksOutlineOverlapAndClues() {
         let puzzle = FitGenerator.daily(for: PuzzleDate(year: 2026, month: 11, day: 19))
         var session = FitSession(puzzle: puzzle)

@@ -300,6 +300,21 @@ public struct FitSession: Sendable {
         placements = Array(repeating: nil, count: puzzle.pieces.count)
     }
 
+    /// A legal placement of `piece` that covers board cell `cell`, if any.
+    /// Tries each part of the piece under the tapped cell so select-then-tap play works.
+    public func placementCovering(_ piece: Int, cell: Int) -> FitPlacement? {
+        guard puzzle.outline.indices.contains(cell), puzzle.outline[cell] else { return nil }
+        let px = puzzle.x(of: cell), py = puzzle.y(of: cell)
+        let shape = puzzle.pieces[piece].rotated(rotations[piece])
+        for part in shape.cells {
+            let x = px - part.x, y = py - part.y
+            if check(piece, x: x, y: y) == .fits {
+                return FitPlacement(rotation: rotations[piece], x: x, y: y)
+            }
+        }
+        return nil
+    }
+
     /// Every spot where a piece fits right now, for VoiceOver and Switch Control.
     public func fittingSpots(_ piece: Int) -> [FitPlacement] {
         var spots: [FitPlacement] = []
