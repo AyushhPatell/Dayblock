@@ -180,6 +180,27 @@ private func days(_ count: Int, from start: PuzzleDate = PuzzleDate(year: 2026, 
         #expect(FitPiece(cells: [FitCell(x: 0, y: 0), FitCell(x: 1, y: 0), FitCell(x: 0, y: 1), FitCell(x: 1, y: 1)]).distinctRotations == [0])
     }
 
+    @Test func rotatingAPlacedPieceKeepsItOrReturnsItToTheTray() {
+        // Wednesday onwards: pieces turn. Place one answer piece, then turn it.
+        let puzzle = FitGenerator.daily(for: PuzzleDate(year: 2026, month: 11, day: 18))
+        #expect(puzzle.rotates)
+        var session = FitSession(puzzle: puzzle)
+        let piece = 0
+        let answer = puzzle.solution[piece]
+        while session.rotations[piece] != answer.rotation { session.rotate(piece) }
+        #expect(session.place(piece, x: answer.x, y: answer.y) == .fits)
+        #expect(session.placements[piece] != nil)
+
+        session.rotate(piece)
+        if let placement = session.placements[piece] {
+            #expect(placement.rotation == (answer.rotation + 1) % 4)
+            #expect(placement.x == answer.x)
+            #expect(placement.y == answer.y)
+        } else {
+            #expect(session.rotations[piece] == (answer.rotation + 1) % 4)
+        }
+    }
+
     @Test func placementChecksOutlineOverlapAndClues() {
         let puzzle = FitGenerator.daily(for: PuzzleDate(year: 2026, month: 11, day: 19))
         var session = FitSession(puzzle: puzzle)

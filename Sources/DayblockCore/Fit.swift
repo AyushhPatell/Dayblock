@@ -277,10 +277,21 @@ public struct FitSession: Sendable {
         placements[piece] = nil
     }
 
-    /// Turns a piece in the tray a quarter turn clockwise.
+    /// Turns a piece a quarter turn clockwise. Tray pieces turn in place. A
+    /// piece on the board stays put when the new turn still fits at the same
+    /// corner; otherwise it goes back to the tray already turned.
     public mutating func rotate(_ piece: Int) {
-        guard puzzle.rotates, placements[piece] == nil else { return }
-        rotations[piece] = (rotations[piece] + 1) % 4
+        guard puzzle.rotates, !isSolved else { return }
+        if let placement = placements[piece] {
+            let next = (placement.rotation + 1) % 4
+            placements[piece] = nil
+            rotations[piece] = next
+            if check(piece, x: placement.x, y: placement.y) == .fits {
+                placements[piece] = FitPlacement(rotation: next, x: placement.x, y: placement.y)
+            }
+        } else {
+            rotations[piece] = (rotations[piece] + 1) % 4
+        }
     }
 
     /// Sends every piece back to the tray.
