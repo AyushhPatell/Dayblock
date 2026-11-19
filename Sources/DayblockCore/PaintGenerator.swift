@@ -1,7 +1,7 @@
 /// Makes Paint puzzles. Same seed, same puzzle, on every device.
 public enum PaintGenerator {
     /// Changing the generator changes every Paint daily. Bump only before launch.
-    public static let version = 1
+    public static let version = 2
 
     struct Config {
         let width: Int
@@ -15,25 +15,30 @@ public enum PaintGenerator {
         /// Random swiping must average at least this multiple of par (in percent),
         /// so planning a route actually beats wandering. 0 turns the check off.
         let wander: Int
+        /// Reject boards where random play averages above this multiple of par (percent). 0 = off.
+        let maxWander: Int
+        /// Reject boards where fewer than this percent of solution swipes paint something new. 0 = off.
+        let minUseful: Int
         let difficulty: Difficulty
     }
 
     static func config(for weekday: PuzzleDate.Weekday) -> Config {
         switch weekday {
         case .monday:
-            return Config(width: 5, height: 5, steps: 5...7, par: 4...6, floor: 10...18, padChance: 0, wander: 130, difficulty: .easy)
+            // Shorter corridors + wander ceiling; floor min stays 10 so boards aren't tiny.
+            return Config(width: 5, height: 5, steps: 3...5, par: 4...6, floor: 10...16, padChance: 0, wander: 110, maxWander: 240, minUseful: 85, difficulty: .easy)
         case .tuesday:
-            return Config(width: 6, height: 6, steps: 6...9, par: 5...7, floor: 13...24, padChance: 0, wander: 140, difficulty: .easy)
+            return Config(width: 6, height: 6, steps: 5...7, par: 5...7, floor: 13...20, padChance: 0, wander: 120, maxWander: 280, minUseful: 85, difficulty: .easy)
         case .wednesday:
-            return Config(width: 6, height: 6, steps: 8...11, par: 6...8, floor: 16...28, padChance: 20, wander: 150, difficulty: .medium)
+            return Config(width: 6, height: 6, steps: 8...11, par: 6...8, floor: 16...28, padChance: 20, wander: 150, maxWander: 0, minUseful: 0, difficulty: .medium)
         case .thursday:
-            return Config(width: 6, height: 6, steps: 9...12, par: 7...9, floor: 17...30, padChance: 20, wander: 150, difficulty: .medium)
+            return Config(width: 6, height: 6, steps: 9...12, par: 7...9, floor: 17...30, padChance: 20, wander: 150, maxWander: 0, minUseful: 0, difficulty: .medium)
         case .friday:
-            return Config(width: 7, height: 7, steps: 10...13, par: 8...11, floor: 22...36, padChance: 25, wander: 160, difficulty: .hard)
+            return Config(width: 7, height: 7, steps: 10...13, par: 8...11, floor: 22...36, padChance: 25, wander: 160, maxWander: 0, minUseful: 0, difficulty: .hard)
         case .saturday:
-            return Config(width: 7, height: 7, steps: 11...14, par: 9...12, floor: 24...38, padChance: 25, wander: 160, difficulty: .hard)
+            return Config(width: 7, height: 7, steps: 11...14, par: 9...12, floor: 24...38, padChance: 25, wander: 160, maxWander: 0, minUseful: 0, difficulty: .hard)
         case .sunday:
-            return Config(width: 7, height: 7, steps: 12...16, par: 10...14, floor: 26...40, padChance: 30, wander: 170, difficulty: .expert)
+            return Config(width: 7, height: 7, steps: 12...16, par: 10...14, floor: 26...40, padChance: 30, wander: 170, maxWander: 0, minUseful: 0, difficulty: .expert)
         }
     }
 
@@ -41,19 +46,19 @@ public enum PaintGenerator {
     static func levelConfig(_ level: Int) -> Config {
         switch level {
         case ..<4:
-            return Config(width: 4, height: 4, steps: 3...4, par: 2...3, floor: 5...10, padChance: 0, wander: 0, difficulty: .easy)
+            return Config(width: 4, height: 4, steps: 3...4, par: 2...3, floor: 5...10, padChance: 0, wander: 0, maxWander: 0, minUseful: 0, difficulty: .easy)
         case 4..<11:
-            return Config(width: 5, height: 5, steps: 4...6, par: 3...5, floor: 8...16, padChance: 0, wander: 110, difficulty: .easy)
+            return Config(width: 5, height: 5, steps: 3...5, par: 3...5, floor: 8...14, padChance: 0, wander: 100, maxWander: 240, minUseful: 85, difficulty: .easy)
         case 11..<21:
-            return Config(width: 5, height: 5, steps: 5...7, par: 4...6, floor: 10...18, padChance: 0, wander: 130, difficulty: .easy)
+            return Config(width: 5, height: 5, steps: 5...7, par: 4...6, floor: 10...18, padChance: 0, wander: 130, maxWander: 0, minUseful: 0, difficulty: .easy)
         case 21..<36:
-            return Config(width: 6, height: 6, steps: 7...10, par: 5...7, floor: 14...26, padChance: 15, wander: 140, difficulty: .medium)
+            return Config(width: 6, height: 6, steps: 7...10, par: 5...7, floor: 14...26, padChance: 15, wander: 140, maxWander: 0, minUseful: 0, difficulty: .medium)
         case 36..<61:
-            return Config(width: 6, height: 6, steps: 8...12, par: 6...9, floor: 16...30, padChance: 20, wander: 150, difficulty: .medium)
+            return Config(width: 6, height: 6, steps: 8...12, par: 6...9, floor: 16...30, padChance: 20, wander: 150, maxWander: 0, minUseful: 0, difficulty: .medium)
         case 61..<101:
-            return Config(width: 7, height: 7, steps: 10...13, par: 7...11, floor: 20...36, padChance: 25, wander: 160, difficulty: .hard)
+            return Config(width: 7, height: 7, steps: 10...13, par: 7...11, floor: 20...36, padChance: 25, wander: 160, maxWander: 0, minUseful: 0, difficulty: .hard)
         default:
-            return Config(width: 7, height: 7, steps: 11...16, par: 9...13, floor: 24...40, padChance: 30, wander: 160, difficulty: .expert)
+            return Config(width: 7, height: 7, steps: 11...16, par: 9...13, floor: 24...40, padChance: 30, wander: 160, maxWander: 0, minUseful: 0, difficulty: .expert)
         }
     }
 
@@ -91,7 +96,10 @@ public enum PaintGenerator {
             guard distance == 0 else { continue }
             // A route that only ever uses two directions is a zig-zag, not a puzzle.
             if par >= 4 && Set(solution).count < 3 { continue }
-            if config.wander > 0 && wanderRatio(puzzle, seed: seed &+ attempt) < config.wander { continue }
+            let ratio = wanderRatio(puzzle, seed: seed &+ attempt)
+            if config.wander > 0 && ratio < config.wander { continue }
+            if config.maxWander > 0 && ratio > config.maxWander { continue }
+            if config.minUseful > 0 && usefulSwipePercent(puzzle) < config.minUseful { continue }
             return puzzle
         }
         return fallback ?? simplest
@@ -199,5 +207,20 @@ public enum PaintGenerator {
             total += swipes
         }
         return total * 100 / (runs * puzzle.par)
+    }
+
+    /// Share of solution swipes that paint at least one new cell (percent).
+    static func usefulSwipePercent(_ puzzle: PaintPuzzle) -> Int {
+        var position = puzzle.start
+        var painted = puzzle.startMask
+        var useful = 0
+        for dir in puzzle.solution {
+            let move = puzzle.board.move(from: position, dir)
+            if (move.painted & ~painted) != 0 { useful += 1 }
+            position = move.to
+            painted |= move.painted
+        }
+        guard !puzzle.solution.isEmpty else { return 100 }
+        return useful * 100 / puzzle.solution.count
     }
 }
